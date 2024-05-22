@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background: rgb(24, 23, 23);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  max-width: 800px;
+  padding: 1rem; /* Adjust padding for smaller screens */
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem; /* Adjust margin-top for smaller screens */
+}
+
+#new-item-form {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#item {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+#new-item-form label {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#new-item-form input[type="submit"] {
+  background: rgb(255, 0, 0);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+#items {
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+}
+
+/* reset */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem; /* Further reduce padding on smaller screens */
+    margin-top: 0.5rem; /* Further reduce margin-top on smaller screens */
+  }
+
+  #new-item-form {
+    flex-direction: column; /* Stack form elements vertically on smaller screens */
+    align-items: stretch; /* Stretch form elements to full width */
+  }
+}
